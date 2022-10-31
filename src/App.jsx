@@ -1,5 +1,5 @@
 import MainHeader from "@/components/header/MainHeader";
-import MainProducts from "./components/header/products/MainProducts";
+import MainProducts from "./components/products/MainProducts";
 
 
 const App = () => {

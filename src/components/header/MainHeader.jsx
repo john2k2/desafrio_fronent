@@ -3,6 +3,7 @@ import AvatarImg from "@/assets/images/image-avatar.png";
 import MenuIcon from "@/components/icons/MenuIcon";
 import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
+import NavLinkHeader from "@/components/header/NavLinkHeader";
 import { useState } from "react";
 
 const MainHeader = () => {
@@ -22,32 +23,35 @@ const MainHeader = () => {
   };
 
   return (
-    <header className=" container mx-auto flex h-20 items-end gap-4 px-4 py-4 ">
-      <button className="mb-1 md:hidden " onClick={handlerOpenMenu}>
-        <MenuIcon />
-      </button>
-      <img
-        className=" md: mr-auto mb-1 md:mx-0"
-        src={Logo}
-        alt="Logo Sneaker"
-      />
-      <nav className={isMenuOpen}>
-        <button className="mb-12 md:hidden" onClick={handlerCloseMenu}>
-          <CloseIcon />
+    <>
+      <header className=" container p-4 mx-auto flex h-20 items-center gap-8 md-p-0 ">
+        <button className=" mt-[1px] md:hidden " onClick={handlerOpenMenu}>
+          <MenuIcon />
         </button>
-        <a href="#">Colecctions</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div className="flex gap-4">
-        <button>
-          <CartIcon />
-        </button>
-        <img src={AvatarImg} alt="" className="w-10" />
-      </div>
-    </header>
+        <img
+          className=" md: mr-auto mb-1 md:mx-0"
+          src={Logo}
+          alt="Logo Sneaker"
+        />
+        <nav className={isMenuOpen}>
+          <button className="mb-12 md:hidden" onClick={handlerCloseMenu}>
+            <CloseIcon />
+          </button>
+          <NavLinkHeader text="Collections" />
+          <NavLinkHeader text="Man" />
+          <NavLinkHeader text="Woman" />
+          <NavLinkHeader text="About" />
+          <NavLinkHeader text="Contact" />
+        </nav>
+        <div className="flex gap-4">
+          <button>
+            <CartIcon />
+          </button>
+          <img src={AvatarImg} alt="" className="w-10" />
+        </div>
+      </header>
+      <span className="container mx-auto h-[1px] w-full bg-gray-900 md:block"></span>
+    </>
   );
 };
 
