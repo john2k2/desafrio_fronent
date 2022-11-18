@@ -13,7 +13,7 @@ const MainHeader = () => {
 
   const handlerOpenMenu = () => {
     setIsMenuOpen(
-      "absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold  md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0"
+      "absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold  md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0 z-10"
     );
   };
   const handlerCloseMenu = () => {
@@ -24,7 +24,7 @@ const MainHeader = () => {
 
   return (
     <>
-      <header className=" container p-4 mx-auto flex h-20 items-center gap-8 md-p-0 ">
+      <header className=" md-p-0 container mx-auto flex h-18 items-center gap-8 p-4 ">
         <button className=" mt-[1px] md:hidden " onClick={handlerOpenMenu}>
           <MenuIcon />
         </button>
