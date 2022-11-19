@@ -6,25 +6,22 @@ import CloseIcon from "@/components/icons/CloseIcon";
 import NavLinkHeader from "@/components/header/NavLinkHeader";
 import { useState } from "react";
 
+import CardDetailsHeader from "@/components/header/CardDetailsHeader";
+
 const MainHeader = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(
-    "hidden font-bold  md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0"
-  );
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenCart, setIsOpenCart] = useState(false);
 
   const handlerOpenMenu = () => {
-    setIsMenuOpen(
-      "absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold  md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0 z-10"
-    );
+    setIsOpenMenu(true);
   };
   const handlerCloseMenu = () => {
-    setIsMenuOpen(
-      "hidden font-bold  md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0"
-    );
+    setIsOpenMenu(false);
   };
 
   return (
     <>
-      <header className=" md-p-0 container mx-auto flex h-18 items-center gap-8 p-4 ">
+      <header className="h-18 container relative mx-auto flex items-center gap-8 p-4 md:mx-auto md:border-b-2 md:border-black md:p-4 md:pb-4 ">
         <button className=" mt-[1px] md:hidden " onClick={handlerOpenMenu}>
           <MenuIcon />
         </button>
@@ -33,7 +30,13 @@ const MainHeader = () => {
           src={Logo}
           alt="Logo Sneaker"
         />
-        <nav className={isMenuOpen}>
+        <nav
+          className={`font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0 ${
+            isOpenMenu
+              ? `absolute top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8  font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0`
+              : `hidden`
+          }`}
+        >
           <button className="mb-12 md:hidden" onClick={handlerCloseMenu}>
             <CloseIcon />
           </button>
@@ -43,14 +46,15 @@ const MainHeader = () => {
           <NavLinkHeader text="About" />
           <NavLinkHeader text="Contact" />
         </nav>
-        <div className="flex gap-4">
-          <button>
+        <div className="flex gap-4 ">
+          <button onClick={() => setIsOpenCart(!isOpenCart)}>
             <CartIcon />
           </button>
           <img src={AvatarImg} alt="" className="w-10" />
+          {isOpenCart && <CardDetailsHeader />}
         </div>
       </header>
-      <span className="container mx-auto h-[1px] w-full bg-gray-900 md:block"></span>
+      <span className="container mx-auto w-full bg-gray-900 md:block"></span>
     </>
   );
 };

@@ -2,21 +2,21 @@ import CartIcon from "@/components/icons/CartIcon";
 
 const DetailProducts = () => {
   return (
-    <section className="container mx-auto px-4 md:px-0  md:max-h-max(100%) ">
-      <p className="text-s mb-6 font-bold uppercase tracking-wide text-Orange ">
+    <section className="md:max-h-max(100%) container mx-auto px-4  md:px-0 ">
+      <p className="text-s mb-3 font-bold uppercase tracking-wide text-Orange ">
         Sneaker Company
       </p>
-      <h2 className="mb-11 text-5xl font-bold ">
+      <h2 className="mb-3 text-3xl font-bold md:text-3xl ">
         Fall Limited Edition Sneakers
       </h2>
-      <p className="mb-8 text-Dark-grayish-blue text-3xl">
+      <p className="text-1xl mb-8 text-Dark-grayish-blue">
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they ll withstand everything the
         weather can offer.
       </p>
-      <div className="mb-8 grid grid-cols-3 items-center gap- font-bold md:grid-cols-[0fr_3fr] ">
-        <span className="text-4xl">$125.00</span>
-        <span className="mb-8 mr-auto rounded-md bg-Pale-orange mx-5 py-1 px-2 text-Orange">
+      <div className="mb-8 grid grid-cols-3 items-center font-bold md:grid-cols-[0fr_3fr]">
+        <span className="text-2xl">$125.00</span>
+        <span className="mx-5 mr-auto rounded-md bg-Pale-orange py-1 px-2 text-Orange">
           50%
         </span>
         <span className="text-right text-xl text-Grayish-blue line-through md:text-start ">
