@@ -46,7 +46,7 @@ const SliderProducts = ({
 
       <div className="relative col-span-4 ">
         <img
-          className=" aspect-[12/10] w-full md:aspect-[16/16] md:cursor-pointer md:rounded-md "
+          className=" aspect-[12/10] w-full md:aspect-[16/16] md:cursor-pointer md:rounded-md"
           src={imagenes[imagen]}
           alt="imagen"
           onClick={openModal}

@@ -25,7 +25,7 @@ const MainImages = ({ imagenSmall, imagenes }) => {
           imagenSmall={imagenSmall}
           imagenes={imagenes}
           isOpenModal={isOpenModal}
-          className=" bg hidden md:absolute md:top-1/2 md:left-1/2 md:grid md:max-w-2xl md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-4 "
+          className="hidden md:absolute md:top-1/2 md:left-1/2 md:grid md:max-w-2xl md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-4 "
           closeModal={closeModal}
         />
       )}
