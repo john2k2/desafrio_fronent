@@ -23,7 +23,7 @@ const MainHeader = () => {
 
   return (
     <>
-      <header className="h-18 container relative mx-auto flex items-center gap-8 p-4 md:mx-auto md:border-b-2 md:border-black md:p-4 md:pb-4 ">
+      <header className="container relative mx-auto flex h-20 items-center gap-4 p-4 md:mx-auto md:border-b-2 md:border-black md:p-4 md:pb-4">
         <button className=" mt-[1px] md:hidden " onClick={handlerOpenMenu}>
           <MenuIcon />
         </button>
@@ -33,9 +33,9 @@ const MainHeader = () => {
           alt="Logo Sneaker"
         />
         <nav
-          className={`font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0 ${
+          className={`font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:bg-white md:p-0 ${
             isOpenMenu
-              ? `absolute top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0  `
+              ? `h-2/2 absolute top-0 left-0 z-10  flex w-4/5  flex-col gap-y-8 bg-white p-8 transition-all duration-300 ease-in-out`
               : `hidden`
           }`}
         >

@@ -9,11 +9,11 @@ const CardDetailsHeader = () => {
 
   return (
     <section className="absolute top-[125%] left-0 z-10 w-full md:left-2/3 md:top-[105%] md:max-w-md md:rounded-md ">
-      <div className="mx-4 rounded-md bg-white">
+      <div className="mx-4 h-auto rounded-md bg-white">
         <h4 className="px-6 py-6 text-lg font-bold">Cart</h4>
         <hr />
         {cartProducts.length === 0 && (
-          <p className="py-10 text-center">Your cart is empty</p>
+          <p className="py-10 text-center font-bold">Your cart is empty</p>
         )}
         {cartProducts.map((product) => (
           <article
@@ -23,7 +23,7 @@ const CardDetailsHeader = () => {
           >
             <img className="rounded-md" src={product.img} alt="" />
             <div className="">
-              <h6>{product.name} </h6>
+              <h6 className="text-l mb-1">{product.name} </h6>
               <p>
                 <span>
                   ${product.discountPrice} x {product.quantity}{" "}
